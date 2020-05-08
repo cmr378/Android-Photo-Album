@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SlideShow">
+
+    <Button
+        android:id="@+id/addLocation"
+        android:layout_width="88dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="108dp"
+        android:onClick="addLocationClicked"
+        android:text="Add"
+        app:layout_constraintStart_toEndOf="@+id/personTag"
+        app:layout_constraintTop_toBottomOf="@+id/next" />
+
+    <EditText
+        android:id="@+id/personTag"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:onClick="clearText"
+        android:text="Person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previous" />
+
+    <ImageView
+        android:id="@+id/slideImage"
+        android:layout_width="354dp"
+        android:layout_height="312dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="nextClicked"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/previous"
+        app:layout_constraintTop_toBottomOf="@+id/slideImage" />
+
+    <Button
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="previousClicked"
+        android:text="Previous"
+        app:layout_constraintEnd_toStartOf="@+id/next"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slideImage" />
+
+    <EditText
+        android:id="@+id/locationTag"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:onClick="clearText"
+        android:text="Location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personTag" />
+
+    <Button
+        android:id="@+id/addPerson"
+        android:layout_width="88dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:onClick="addPersonClicked"
+        android:text="Add"
+        app:layout_constraintStart_toEndOf="@+id/personTag"
+        app:layout_constraintTop_toBottomOf="@+id/next" />
+
+    <Button
+        android:id="@+id/deleteLocation"
+        android:layout_width="88dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="deleteLocationClicked"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addPerson"
+        app:layout_constraintTop_toBottomOf="@+id/deletePerson" />
+
+    <Button
+        android:id="@+id/deletePerson"
+        android:layout_width="88dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="deletePersonClicked"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/addPerson"
+        app:layout_constraintTop_toBottomOf="@+id/next" />
+
+</android.support.constraint.ConstraintLayout>

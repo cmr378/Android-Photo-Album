@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Authors: Carlos Romero and Steven Ruda-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AlbumC">
+
+   <children>
+
+   <MenuBar fx:id="first" prefHeight="37.0" prefWidth="855.0">
+      <menus>
+         <Menu text="File">
+            <items>
+               <MenuItem fx:id="logout" onAction="#logoutClicked" text="Logout" />
+               <SeparatorMenuItem />
+            </items>
+         </Menu>
+         <Menu text="Navigate">
+            <items>
+               <MenuItem fx:id="returnToAlbums" onAction="#returnToAlbumPage" text="GoTo My Albums" />
+            </items>
+         </Menu>
+         <Menu text="Help">
+            <items>
+               <MenuItem text="About" />
+            </items>
+         </Menu>
+      </menus>   
+	  </MenuBar>
+   
+   
+
+
+   <HBox>
+   <children>
+
+			<TabPane fx:id="section" prefHeight="575.0" prefWidth="660.0">
+				<tabs>
+					<Tab text="album">
+						<content>
+							  <ScrollPane prefHeight="575.0" prefWidth="660.0">
+								<content>
+											<TilePane fx:id="preview" prefHeight="518.0" prefWidth="541.0" style="-fx-background-color: azure;" />
+								</content>
+							  </ScrollPane>
+						</content>
+					</Tab>
+					<Tab text="photo">
+						<content>
+									<Pagination fx:id="singleView" /> 
+						</content>
+					</Tab>
+				</tabs>
+			</TabPane>
+
+		 
+<VBox prefHeight="576.0" prefWidth="253.0">
+
+    <GridPane hgap="10" prefHeight="50.0" vgap="10">
+        <TextField fx:id="tagValue" prefColumnCount="10" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="tagName" prefColumnCount="10" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="tag name" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+		
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="tag value" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <columnConstraints>
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                     <ColumnConstraints />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>	
+    </GridPane>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="add or create tag" />
+     <Button fx:id="delete" prefWidth="100.0" text="Delete " />
+
+     <Button fx:id="add" prefHeight="27.0" prefWidth="100.0" text="Create" />
+
+          <ListView fx:id="photoAttributes" prefHeight="267.0" prefWidth="219.0" />
+               <TextField fx:id="popup" text="Enter Photo Name" />
+               <Button fx:id="addPhoto" mnemonicParsing="false" onAction="#addPhotoClicked" text="Add Photo" />
+               <Button mnemonicParsing="false" onAction="#recaption" prefHeight="27.0" prefWidth="82.0" text="Recaption" />
+               <Button mnemonicParsing="false" onAction="#transfer" prefHeight="27.0" prefWidth="83.0" text="Transfer" />
+</VBox>
+			  
+			  
+			</children>
+	</HBox>
+
+   </children>
+
+
+</VBox>
